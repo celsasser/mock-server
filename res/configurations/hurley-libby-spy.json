@@ -1,0 +1,21 @@
+{
+	"server": {
+		"port": 8989,
+		"protocol": "http"
+	},
+	"mocks": [
+		{
+			"method": "get",
+			"path": "/queries",
+			"response": {
+				"body": {
+					"id": "urn:query:id"
+				},
+				"headers": {
+					"x-test": "test"
+				},
+				"statusCode": 200
+			}
+		}
+	]
+}

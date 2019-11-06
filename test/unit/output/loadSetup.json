@@ -1,0 +1,15 @@
+{
+	"mocks": [
+		{
+			"method": "get",
+			"path": "/route",
+			"response": {
+				"statusCode": 200
+			}
+		}
+	],
+	"server": {
+		"port": 8080,
+		"protocol": "https"
+	}
+}

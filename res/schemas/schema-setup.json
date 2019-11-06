@@ -1,0 +1,60 @@
+{
+	"$id": "schema://beetle/schema-setup.json",
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"type": "object",
+	"required": [
+		"mocks",
+		"server"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"mocks": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": [
+					"method",
+					"path"
+				],
+				"additionalProperties": false,
+				"properties": {
+					"method": {
+						"$ref": "schema-library.json#/http/method"
+					},
+					"path": {
+						"type": "string"
+					},
+					"response": {
+						"type": "object",
+						"additionalProperties": false,
+						"properties": {
+							"body": {
+							},
+							"contentType": {
+								"type": "string"
+							},
+							"headers": {
+								"type": "object"
+							},
+							"statusCode": {
+								"type": "number"
+							}
+						}
+					}
+				}
+			}
+		},
+		"server": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"port": {
+					"type": "number"
+				},
+				"protocol": {
+					"$ref": "schema-library.json#/http/protocol"
+				}
+			}
+		}
+	}
+}
