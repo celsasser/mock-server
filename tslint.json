@@ -30,8 +30,11 @@
 				"limit": 160
 			}
 		},
-		"quotemark": true,
-		"trailing-comma": {
+		"quotemark": [
+			true,
+			"double",
+			"avoid-escape"
+		],		"trailing-comma": {
 			"severity": "error"
 		},
 		"variable-name": {

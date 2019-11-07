@@ -12,7 +12,7 @@
 					"id": "urn:query:id"
 				},
 				"headers": {
-					"x-test": "test"
+					"X-Test": "test"
 				},
 				"statusCode": 200
 			}

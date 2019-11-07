@@ -17,6 +17,11 @@ import {
 import {CliProperties} from "./types/cli";
 
 
+/**
+ * Loads the setup and runs the server
+ * @param params
+ * @throws {Error}
+ */
 export default function run(params: CliProperties): Promise<void> {
 	const setup = loadSetup(params.setupPath);
 	const server = new Server(setup.server);
